@@ -11,6 +11,7 @@ class Highlight {
   // safe/production mode - swallows more errors, tries to keep running
   // even if a single syntax or parse hits a fatal error
   bool _safeMode;
+  Emitter get emitter => _TokenTreeEmitter();
 
   Highlight(): _plugins = [],
     _languages = {},
